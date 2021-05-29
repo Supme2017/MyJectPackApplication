@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="aidlViewModel"
+            type="com.jectpack.aidl.client.bean.AidlViewModel" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.jectpack.aidl.client.AidlActivity">
+
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={aidlViewModel.name}"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{etName.text}"
+            android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/btn_aidl_add_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="addBook"
+                android:onClick="@{aidlViewModel::addBook}"/>
+
+            <Button
+                android:id="@+id/btn_aidl_getlist_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="getBookList"
+                android:onClick="@{aidlViewModel::getList}"/>
+
+        <Button
+            android:id="@+id/btn_aidl_register_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册book监听服务"
+            android:onClick="@{aidlViewModel::registerBookListener}"/>
+
+        <Button
+            android:id="@+id/btn_aidl_unregister_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="反注册book监听服务"
+            android:onClick="@{aidlViewModel::unRegisterBookListener}"/>
+
+
+        <Button
+            android:id="@+id/btn_aidl_decrypt_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跨进程解密"
+            android:onClick="@{()->aidlViewModel.decrypt(aidlViewModel.name)}"/>
+
+        <Button
+            android:id="@+id/btn_aidl_encrypt_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跨进程加密"
+            android:onClick="@{(view)->aidlViewModel.encrypt(view, etName.text)}"/>
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jectpack.activity.MainActivity">
+
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="mainInfo"-->
+<!--            type="com.jectpack.bean.MainInfo" />-->
+<!--    </data>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{mainInfo.name}"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/bt_hilt_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hilt Activity"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/bt_databinding_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="databinding Activity"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/bt_kotlin_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kotlin Activity"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/bt_kotlin_aidlactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kotlin AIDL Activity"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/bt_kotlin_aidl_pools_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kotlin AIDL POOLS Activity"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/bt_kotlin_socketactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kotlin socket Activity"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/bt_kotlin_smessengeractivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kotlin messenger Activity"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/bt_recycle_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="recycle view Activity"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/bt_recycle_section_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="recycle view section Activity"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/bt_paging3_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paging3 Activity"
+            android:onClick="onClick" />
+
+    </LinearLayout>
+</LinearLayout>

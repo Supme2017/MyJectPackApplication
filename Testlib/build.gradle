@@ -1,0 +1,14 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+java {
+
+    sourceCompatibility rootProject.ext.android.javaVersion
+    targetCompatibility rootProject.ext.android.javaVersion
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}

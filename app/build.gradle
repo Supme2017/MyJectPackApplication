@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-android'
+}
+
+//使用jectpack hilt注解
+//apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility rootProject.ext.android.javaVersion
+        targetCompatibility rootProject.ext.android.javaVersion
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["material"]
+    implementation rootProject.ext.dependencies["constraintlayout"]
+    implementation rootProject.ext.dependencies["kotlin-stdlib"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["junitExt"]
+    androidTestImplementation rootProject.ext.dependencies["espresso-core"]
+
+    //使用jectpack hilt注解
+    implementation rootProject.ext.dependencies["hilt-android"]
+    // hilt When using Java.
+    annotationProcessor rootProject.ext.dependencies["hilt-compiler"]
+    annotationProcessor rootProject.ext.dependencies["hilt-android-compiler"]
+
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["retrofit-converter-gson"]
+    implementation rootProject.ext.dependencies["gson"]
+
+
+    //Room
+    implementation rootProject.ext.dependencies["room-runtime"]
+    annotationProcessor rootProject.ext.dependencies["room-compiler"]
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation rootProject.ext.dependencies["room-ktx"]
+
+    implementation rootProject.ext.dependencies["kotlinx-coroutines-core"]
+    implementation rootProject.ext.dependencies["kotlinx-coroutines-android"]
+
+    implementation rootProject.ext.dependencies["glide"]
+
+    //paging
+    implementation rootProject.ext.dependencies["paging-runtime"]
+    implementation rootProject.ext.dependencies["paging_guava"]
+
+}
