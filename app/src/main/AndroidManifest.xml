@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.robert.jectpack">
+    package="com.robert.jetpack">
 
     <permission
-        android:name="com.robert.jectpack.permission.ACCESS_AIDL_SERVICE"
+        android:name="com.robert.jetpack.permission.ACCESS_AIDL_SERVICE"
         android:protectionLevel="normal" />
 
     <uses-permission android:name="com.robert.jectpack.permission.ACCESS_AIDL_SERVICE" />
@@ -35,7 +35,7 @@
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
 
     <application
-        android:name="com.jectpack.MyJectPackApplication"
+        android:name="com.jetpack.MyJectPackApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -44,37 +44,37 @@
         android:theme="@style/Theme.MyJectPackApplication"
         android:usesCleartextTraffic="true">
 
-        <activity android:name="com.jectpack.activity.MainActivity">
+        <activity android:name="com.jetpack.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.jectpack.activity.HiltActivity" />
-        <activity android:name="com.jectpack.activity.DataBindingActivity" />
-        <activity android:name="com.jectpack.activity.KotlinActivity" />
-        <activity android:name="com.jectpack.aidl.client.AidlActivity" />
-        <activity android:name="com.jectpack.aidl.client.AidlPoolsActivity" />
-        <activity android:name="com.jectpack.socket.SocketClientActivty" />
-        <activity android:name="com.jectpack.messenger.MessengerActivty" />
-        <activity android:name="com.jectpack.activity.RecycleViewDataBindingActivity" />
-            <activity android:name="com.jectpack.activity.RecycleViewDataBindingSectionActivity" />
-        <activity android:name="com.jectpack.activity.Paging3Activity"/>
+        <activity android:name="com.jetpack.activity.HiltActivity" />
+        <activity android:name="com.jetpack.activity.DataBindingActivity" />
+        <activity android:name="com.jetpack.activity.KotlinActivity" />
+        <activity android:name="com.jetpack.aidl.client.AidlActivity" />
+        <activity android:name="com.jetpack.aidl.client.AidlPoolsActivity" />
+        <activity android:name="com.jetpack.socket.SocketClientActivty" />
+        <activity android:name="com.jetpack.messenger.MessengerActivty" />
+        <activity android:name="com.jetpack.activity.RecycleViewDataBindingActivity" />
+            <activity android:name="com.jetpack.activity.RecycleViewDataBindingSectionActivity" />
+        <activity android:name="com.jetpack.activity.Paging3Activity"/>
 
         <!-- <service android:name="com.jectpack.aidl.service.RemoteService" -->
         <!-- android:process="om.jectpack.aidl.service.remote"/> -->
         <service
-            android:name="com.jectpack.aidl.service.AidlService"
+            android:name="com.jetpack.aidl.service.AidlService"
             android:process=":aidlRemote" />
         <service
-            android:name="com.jectpack.aidl.service.BinderPoolsService"
+            android:name="com.jetpack.aidl.service.BinderPoolsService"
             android:process=":binderPoolsRemote" />
         <service
-            android:name="com.jectpack.socket.SocketService"
+            android:name="com.jetpack.socket.SocketService"
             android:process=":socketRemote" />
         <service
-            android:name="com.jectpack.messenger.MessengerService"
+            android:name="com.jetpack.messenger.MessengerService"
             android:process=":messengerRemote" />
     </application>
 

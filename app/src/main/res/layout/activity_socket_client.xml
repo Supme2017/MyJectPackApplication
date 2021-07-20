@@ -4,10 +4,10 @@
     <data>
         <variable
             name="socketViewModel"
-            type="com.jectpack.socket.bean.SockeViewModel" />
+            type="com.jetpack.socket.bean.SockeViewModel" />
         <variable
             name="socketHelper"
-            type="com.jectpack.socket.SocketHelper" />
+            type="com.jetpack.socket.SocketHelper" />
     </data>
 
     <LinearLayout
@@ -17,7 +17,7 @@
         android:orientation="vertical"
         android:padding="5dp"
 
-        tools:context="com.jectpack.socket.SocketClientActivty">
+        tools:context="com.jetpack.socket.SocketClientActivty">
 
 
         <LinearLayout

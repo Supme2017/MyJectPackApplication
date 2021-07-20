@@ -4,7 +4,7 @@
     <data>
         <variable
             name="user"
-            type="com.jectpack.paging.bean.UserResponse.Data.User" />
+            type="com.jetpack.paging.bean.UserResponse.Data.User" />
     </data>
 
     <LinearLayout

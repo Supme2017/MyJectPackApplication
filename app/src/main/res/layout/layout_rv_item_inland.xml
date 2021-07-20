@@ -3,11 +3,11 @@
 
     <data>
         <variable
-            name="news"
-            type="com.jectpack.bean.NewsItem" />
+            name="news2"
+            type="com.jetpack.bean.NewsItem2" />
         <variable
             name="listener"
-            type="com.jectpack.impl.NewsOnClickListener" />
+            type="com.jetpack.impl.News2OnClickListener" />
     </data>
 
     <LinearLayout
@@ -15,32 +15,32 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:orientation="vertical"
-        android:onClick="@{(view)->listener.onClick(view, news)}">
+        android:onClick="@{(view)->listener.onClick(view, news2)}">
 
         <TextView
             android:id="@+id/tv_flag"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{news.type%2 == 0 ? `inland` : `foreign`}"/>
+            android:text="@{news2.type%2 == 0 ? `inland` : `foreign`}"/>
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{news.title}"
-            android:onClick="@{()->listener.onClick(news)}"/>
+            android:text="@{news2.title}"
+            android:onClick="@{()->listener.onClick(news2)}"/>
 
         <TextView
             android:id="@+id/tv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{news.content}"/>
+            android:text="@{news2.content}"/>
 
         <TextView
             android:id="@+id/tv_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{@string/nameFormat(news.title, news.content)}"
-            android:onClick="@{()->listener.onClick(news, tvFlag.text.toString())}"/>
+            android:text="@{@string/nameFormat(news2.title, news2.content)}"
+            android:onClick="@{()->listener.onClick(news2, tvFlag.text.toString())}"/>
 
     </LinearLayout>
 </layout>

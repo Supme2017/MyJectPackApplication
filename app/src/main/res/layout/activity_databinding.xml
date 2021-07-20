@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.jectpack.utils.LoggerUtils" alias="logger"/>
+        <import type="com.jetpack.utils.LoggerUtils" alias="logger"/>
 <!--        <variable-->
 <!--            name="userViewModel"-->
 <!--            type="com.jectpack.bean.UserViewModel" />-->
 
         <variable
             name="userViewModel"
-            type="com.jectpack.bean.UserViewModelObservable" />
+            type="com.jetpack.bean.UserViewModelObservable" />
 
         <variable
             name="userInfo"
-            type="com.jectpack.bean.UserInfo" />
+            type="com.jetpack.bean.UserInfo" />
 
         <variable
             name="userInfoObserable"
-            type="com.jectpack.bean.UserInfoObserable" />
+            type="com.jetpack.bean.UserInfoObserable" />
 
         <variable
             name="progress"
-            type="com.jectpack.bean.ProgressObserable" />
+            type="com.jetpack.bean.ProgressObserable" />
 
     </data>
 
@@ -31,14 +31,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.jectpack.activity.MainActivity">
+        tools:context="com.jetpack.activity.MainActivity">
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:imageFromUrl="@{userViewModel.userInfoMutableLiveData.headIconURL}"/>
 
-        <com.jectpack.view.MyEditText
+        <com.jetpack.view.MyEditText
             android:id="@+id/et_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
             android:text="@={userViewModel.userInfoMutableLiveData.sex}"
             android:textColor="@color/black"/>
 
-        <com.jectpack.view.MyTextView
+        <com.jetpack.view.MyTextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +65,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{userViewModel.userInfoMutableLiveData.sex}"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            />
 
 
         <TextView
@@ -153,7 +154,7 @@
             android:layout_height="wrap_content"
             android:text="@{userInfoObserable.sex}"/>
 
-        <com.jectpack.view.MyEditText
+        <com.jetpack.view.MyEditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{userViewModel.userInfoMutableLiveData.name}"
@@ -165,7 +166,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.jectpack.view.MySeekBar
+            <com.jetpack.view.MySeekBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:id="@+id/my_seek_bar"
                 android:layout_width="match_parent"

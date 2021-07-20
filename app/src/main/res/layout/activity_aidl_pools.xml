@@ -6,7 +6,7 @@
     <data>
         <variable
             name="aidlViewModel"
-            type="com.jectpack.aidl.client.bean.AidlViewModel" />
+            type="com.jetpack.aidl.client.bean.AidlViewModel" />
 
     </data>
 
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.jectpack.aidl.client.AidlActivity">
+        tools:context="com.jetpack.aidl.client.AidlActivity">
 
 
         <EditText

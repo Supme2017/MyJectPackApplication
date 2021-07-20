@@ -4,7 +4,7 @@
     <data>
         <variable
             name="footer"
-            type="com.jectpack.paging.bean.FooterBean" />
+            type="com.jetpack.paging.bean.FooterBean" />
     </data>
 
     <LinearLayout

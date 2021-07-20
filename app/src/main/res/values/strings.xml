@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyJectPackApplication</string>
+    <string name="app_name">MyJetPackApplication</string>
 
     <string name="nameFormat">concat string %s_%s</string>
 </resources>
